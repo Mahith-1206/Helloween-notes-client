@@ -4,23 +4,26 @@
   box-sizing: border-box;
 }
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Arial", sans-serif;
 }
 body {
-  background: #eee;
+  background: #e6e0e0;
   padding: 0 16px;
 }
 
 header {
-  background-color: greenyellow;
+  background-color: rgb(170, 38, 14);
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 header h1 {
   color: #fff;
-  font-family: "McLaren", cursive;
+  font-family: "Arial", sans-serif;
   font-weight: 200;
 }
 
@@ -48,7 +51,7 @@ footer p {
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
-  color: cyan;
+  color: rgb(207, 38, 33);
 }
 .note p {
   font-size: 0.9em;
@@ -81,7 +84,7 @@ footer p {
 }
 
 .input-title {
-  margin: 40px 40px 5px 40px;
+  margin: 40px 40px 5px 700px;
   width: 25%;
   padding: 20px 20px 20px 20px;
   border-radius: 10px;
@@ -93,7 +96,7 @@ footer p {
 
 .input-body {
   height: 120px;
-  margin: 10px 20px 10px 40px;
+  margin: 10px 20px 10px 700px;
   width: 25%;
   padding: 20px 20px 20px 20px;
   border-radius: 10px;
@@ -101,6 +104,11 @@ footer p {
   border: none;
   box-shadow: 0 2px 5px #ccc;
   font-size: 15px;
+}
+
+.input-area {
+  display: inline;
+  justify-content: center;
 }
 
 .modify-title {
@@ -127,11 +135,11 @@ footer p {
 }
 
 .add-button {
-  background-color: lightcyan;
+  background-color: rgb(202, 38, 33);
   margin: 80px 10px 10px 5px;
   padding: 15px 15px 15px 15px;
   box-shadow: 0 2px 5px #ccc;
-  color: grey;
+  color: rgb(251, 251, 251);
   border: none;
   border-radius: 10px;
   font-size: 15px;
@@ -142,7 +150,7 @@ footer p {
 .delete-button {
   position: relative;
   float: left;
-  background-color: green;
+  background-color: rgb(180, 41, 19);
   margin: 20px 20px 20px 20px;
   padding: 12px 55px 25px 10px;
   box-shadow: 0 2px 5px #ccc;
@@ -157,7 +165,7 @@ footer p {
 .save-button {
   position: relative;
   float: left;
-  background-color: green;
+  background-color: rgb(180, 41, 19);
   margin: 20px 20px 20px 38px;
   padding: 12px 12px 12px 10px;
   box-shadow: 0 2px 5px #ccc;
