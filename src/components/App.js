@@ -13,14 +13,14 @@ function App() {
   useEffect(() => {
     // Fetch existing notes when the component mounts
     axios
-      .get("http://localhost:3001/api/notes")
+      .get("https://helloween-notes.onrender.com/api/notes")
       .then((response) => setNotes(response.data))
       .catch((error) => console.error(error));
   }, []);
 
   function addNote(newNote) {
     axios
-      .post("http://localhost:3001/api/notes", newNote)
+      .post("https://helloween-notes.onrender.com/api/notes", newNote)
       .then((response) => setNotes([...notes, response.data]))
       .catch((error) => console.error(error));
   }
@@ -31,7 +31,7 @@ function App() {
 
     // Send a DELETE request to remove the note from the backend
     axios
-      .delete(`http://localhost:3001/api/notes/${noteId}`)
+      .delete(`https://helloween-notes.onrender.com/api/notes/${noteId}`)
       .then(() => setNotes(notes.filter((note) => note._id !== id)))
       .catch((error) => console.error(error));
   }
@@ -49,7 +49,10 @@ function App() {
     const noteId = id;
 
     axios
-      .put(`http://localhost:3001/api/notes/${noteId}`, { title, content })
+      .put(`https://helloween-notes.onrender.com/api/notes/${noteId}`, {
+        title,
+        content,
+      })
       .then((response) => {
         setNotes(
           notes.map((note) => {
@@ -58,6 +61,7 @@ function App() {
             }
           })
         );
+
         setShowModify(false);
       })
       .catch((error) => console.error(error));
@@ -70,10 +74,9 @@ function App() {
       {showModify && (
         <ModifyNote id={modifyNoteId} onCancel={onCancel} onSave={onSave} />
       )}
-      {notes.map((noteItem, index) => {
+      {notes.map((noteItem) => {
         return (
           <Note
-            key={index}
             id={noteItem._id}
             title={noteItem.title}
             content={noteItem.content}
